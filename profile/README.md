@@ -16,6 +16,39 @@ This project connects the esp32 board and scratch, provides a block to create rt
 ### ESP32 side
 
 Instructions are divided into an opcode part and a data part.
+COMMAND BLOCK makes task to run function.
+
+```c
+void	mapping_block_task(uint8_t *func)
+{
+	switch (func[0])
+	{
+		case 0x81://opcode
+			task_init(&(func[1]));
+			break;
+		default:
+			;
+	}
+}
+
+static void task_init(uint8_t *data)
+{
+	uint8_t	*func;
+	size_t	len;
+
+	len = strlen((char *)data) + 1;
+	
+	func = heap_caps_malloc(sizeof(uint8_t) * len, MALLOC_CAP_8BIT);
+	assert(func != 0);
+	memset(func, 0, len);
+
+	strcpy((char *)func, (char *)data);
+	//less priority than ble notify
+	xTaskCreate(task_behaviour, "task_behaviour", 4096, (void *)func, tskIDLE_PRIORITY - 1, NULL);
+}
+```
+
+FUNCTION BLOCKs have the same structure.
 
 ```c
 static void execute_func(uint8_t *data)
