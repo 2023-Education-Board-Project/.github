@@ -13,6 +13,8 @@ This project connects the esp32 board and scratch, provides a block to create rt
 
 ## Instructions
 
+### ESP32 side
+
 Instructions are divided into an opcode part and a data part.
 
 ```c
@@ -34,6 +36,8 @@ static void execute_func(uint8_t *data)
 	}
 }
 ```
+
+### Scratch side
 
 ![스크린샷 2023-11-10 오후 1 16 49](https://github.com/2023-Education-Board-Project/.github/assets/69339846/1994296f-6eed-45f1-b9c8-31385e3cee9a)
 
