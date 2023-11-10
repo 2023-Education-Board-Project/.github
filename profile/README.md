@@ -5,6 +5,12 @@
 [![Build Status](https://travis-ci.org/LLK/scratch-vm.svg?branch=develop)](https://travis-ci.org/LLK/scratch-vm)
 [![Coverage Status](https://coveralls.io/repos/github/LLK/scratch-vm/badge.svg?branch=develop)](https://coveralls.io/github/LLK/scratch-vm?branch=develop)
 
+##Intro
+
+![스크린샷 2023-11-10 오후 4 04 57](https://github.com/2023-Education-Board-Project/.github/assets/69339846/b8b04a4b-1d47-40ab-bb7b-3f239693cfa9)
+
+This project connects the esp32 board and scratch, provides a block to create rtos tasks.
+
 ## Instructions
 
 ![스크린샷 2023-11-10 오후 1 16 49](https://github.com/2023-Education-Board-Project/.github/assets/69339846/1994296f-6eed-45f1-b9c8-31385e3cee9a)
