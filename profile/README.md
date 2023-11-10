@@ -13,6 +13,28 @@ This project connects the esp32 board and scratch, provides a block to create rt
 
 ## Instructions
 
+Instructions are divided into an opcode part and a data part.
+
+```c
+static void execute_func(uint8_t *data)
+{
+	switch (data[0])//opcode
+	{
+		case 0xC1://display
+			display_func((char *)(&(data[1])));
+			break;
+		case 0xC2://loop
+			loop_func(&(data[1]));
+			break;
+		case 0xC3://wait
+			wait_func(&(data[1]));
+			break;
+		default:
+			print_text_lcd("%X\n", data[0]);
+	}
+}
+```
+
 ![스크린샷 2023-11-10 오후 1 16 49](https://github.com/2023-Education-Board-Project/.github/assets/69339846/1994296f-6eed-45f1-b9c8-31385e3cee9a)
 
 Command Block's parameter contains func variable
@@ -65,6 +87,9 @@ loop (loop, func) {
 ```
 
 ## Installation
+
+### Scratch
+
 This requires you to have Git and Node.js installed.
 
 To install as a dependency for your own application:
@@ -87,6 +112,10 @@ git clone https://github.com/LLK/scratch-gui.git
 cd scratch-gui
 npm install
 ```
+
+### ESP32 Board
+
+install esp-idf by following [instruction](https://github.com/espressif/esp-idf/tree/master)
 
 ## Development Server
 This requires Node.js to be installed.
