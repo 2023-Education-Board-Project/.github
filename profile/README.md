@@ -7,6 +7,23 @@
 
 ## Instructions
 
+![스크린샷 2023-11-10 오후 1 16 49](https://github.com/2023-Education-Board-Project/.github/assets/69339846/1994296f-6eed-45f1-b9c8-31385e3cee9a)
+
+Command Block's parameter contains func variable
+
+```javascript
+/**
+* @param {string} func - the func to run.
+* @return {Promise} - a Promise that resolves when writing to peripheral.
+*/
+runTask (func) {
+    const output = Base64Util.base64ToUint8Array(func);
+    return this.send(BLECommand.CMD_TASK, output);
+}
+```
+
+![스크린샷 2023-11-10 오후 1 15 04](https://github.com/2023-Education-Board-Project/.github/assets/69339846/133e95c9-ea90-4c12-aaf2-2c4bf23bd2bd)
+
 Function Blocks must return string type
 
 ```javascript
@@ -23,6 +40,9 @@ displayText (text) {
     return cmd;
 }
 ```
+
+![스크린샷 2023-11-10 오후 1 16 59](https://github.com/2023-Education-Board-Project/.github/assets/69339846/5406cd0a-6b56-447f-a33a-8263c26e27c9)
+
 Function Control Block's parameter contains func variable 
 ```javascript
 /**
