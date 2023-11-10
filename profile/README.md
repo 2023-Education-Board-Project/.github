@@ -1,6 +1,6 @@
 ## esp32 extension
 
-#### esp32 extension is using [Scratch VM](https://github.com/scratchfoundation/scratch-vm), [Scratch Gui](https://github.com/scratchfoundation/scratch-gui)
+#### esp32 extension is using [Scratch VM](https://github.com/scratchfoundation/scratch-vm), [Scratch Gui](https://github.com/scratchfoundation/scratch-gui), [esp-idf](https://github.com/espressif/esp-idf/tree/master/examples/bluetooth/nimble/bleprph)
 
 [![Build Status](https://travis-ci.org/LLK/scratch-vm.svg?branch=develop)](https://travis-ci.org/LLK/scratch-vm)
 [![Coverage Status](https://coveralls.io/repos/github/LLK/scratch-vm/badge.svg?branch=develop)](https://coveralls.io/github/LLK/scratch-vm?branch=develop)
